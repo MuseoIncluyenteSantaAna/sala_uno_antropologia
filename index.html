@@ -124,11 +124,13 @@
       <span class="close" onclick="closePopup()">&times;</span>
       <h2 id="popup-title">Información de la imagen</h2>
       <p id="popup-description">Aquí puedes agregar la información que deseas mostrar sobre la imagen seleccionada.</p>
-      <button class="button" onclick="playAudio()">Reproducir audio</button>
+      <button class="button" onclick="toggleAudio()">Reproducir audio</button>
     </div>
   </div>
 
   <script>
+    var audioElement;
+
     function openPopup(imageId) {
       var popup = document.getElementById("popup");
       var title = document.getElementById("popup-title");
@@ -195,14 +197,17 @@
       popup.style.display = "none";
     }
     
-    function playAudio() {
+    function toggleAudio() {
       var popup = document.getElementById("popup");
       var audioFile = popup.dataset.audio;
       
       if (audioFile) {
-        // Lógica para reproducir el audio deseado
-        var audio = new Audio(audioFile);
-        audio.play();
+        if (audioElement && !audioElement.paused) {
+          audioElement.pause();
+        } else {
+          audioElement = new Audio(audioFile);
+          audioElement.play();
+        }
       }
     }
   </script>
