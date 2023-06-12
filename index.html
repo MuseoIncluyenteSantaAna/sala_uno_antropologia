@@ -5,6 +5,11 @@
   <style>
     /* Estilos existentes */
 
+    body {
+      background-color: #222;
+      color: #fff;
+    }
+
     #carousel-container {
       position: relative;
       width: 100%;
@@ -38,12 +43,20 @@
 
     .carousel-navigation button {
       pointer-events: auto;
-      background: transparent;
+      background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
       border: none;
       outline: none;
       font-size: 30px;
       color: #fff;
       cursor: pointer;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-navigation button:hover {
+      background: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.8));
     }
 
     .carousel-info {
@@ -69,8 +82,8 @@
 </head>
 <body>
   <h1>
-    <span>Sala 1 - Arqueologia</span>
-    <a href="https://museosantaana.netlify.app/" id="home-button">Home</a>
+    <span style="color: white;">Sala 1 - Arqueologia</span>
+    <a href="https://museosantaana.netlify.app/" id="home-button" style="color: white;">Home</a>
   </h1>
 
   <div id="carousel-container">
