@@ -84,44 +84,43 @@
       padding: 20px;
       text-align: center;
     }
-
-    /* Estilos para la información de la imagen */
+    
+    /* Estilo para el cuadro de texto */
     .carousel-caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .carousel-caption h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .carousel-caption p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
-    .carousel-caption button {
-      background-color: black;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border-radius: 20px;
+      width: 60%; /* Ajusta el ancho del cuadro de texto */
+      max-width: 500px; /* Establece un ancho máximo del cuadro de texto */
+      background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del cuadro de texto */
+      padding: 20px; /* Espaciado interno del cuadro de texto */
+      border-radius: 10px; /* Bordes redondeados del cuadro de texto */
     }
     
+    /* Estilo para el título dentro del cuadro de texto */
+    .carousel-caption h3 {
+      color: white; /* Color del texto del título */
+      font-size: 30px; /* Tamaño del texto del título */
+      margin-bottom: 10px; /* Espaciado inferior del título */
+    }
+    
+    /* Estilo para la descripción dentro del cuadro de texto */
+    .carousel-caption p {
+      color: white; /* Color del texto de la descripción */
+      font-size: 22px; /* Tamaño del texto de la descripción */
+      margin-bottom: 10px; /* Espaciado inferior de la descripción */
+    }
+    
+    /* Estilo para el botón dentro del cuadro de texto */
+    .carousel-caption button {
+      background-color: black; /* Color de fondo del botón */
+      color: white; /* Color del texto del botón */
+      border: none; /* Sin borde */
+      padding: 10px 20px; /* Espaciado interno del botón */
+      border-radius: 20px; /* Bordes redondeados del botón */
+      cursor: pointer;
+    }
+    
+    /* Estilo para el botón cuando se coloca el cursor encima */
     .carousel-caption button:hover {
-      background-color: #333333;
+      background-color: #777777; /* Color de fondo del botón al pasar el cursor */
     }
   </style>
 </head>
@@ -140,6 +139,8 @@
       <li data-target="#myCarousel" data-slide-to="4"></li>
       <li data-target="#myCarousel" data-slide-to="5"></li>
       <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
     </ol>
 
      <div class="carousel-inner" role="listbox">
@@ -216,7 +217,6 @@
         </div>
       </div>
     </div>
-
     <!-- Controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
