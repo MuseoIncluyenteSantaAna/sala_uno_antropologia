@@ -84,6 +84,45 @@
       padding: 20px;
       text-align: center;
     }
+
+    /* Estilos para la información de la imagen */
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .carousel-caption h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .carousel-caption p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .carousel-caption button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 20px;
+    }
+    
+    .carousel-caption button:hover {
+      background-color: #333333;
+    }
   </style>
 </head>
 <body>
@@ -101,11 +140,9 @@
       <li data-target="#myCarousel" data-slide-to="4"></li>
       <li data-target="#myCarousel" data-slide-to="5"></li>
       <li data-target="#myCarousel" data-slide-to="6"></li>
-      <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
     </ol>
 
-    <div class="carousel-inner" role="listbox">
+     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src="1.jpg" alt="Image 1" class="carousel-image" data-title="Título 1" data-description="Descripción 1" data-audio="audio1.mp3">
         <div class="carousel-caption">
@@ -207,8 +244,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 
