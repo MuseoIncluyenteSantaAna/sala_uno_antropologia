@@ -84,8 +84,13 @@
       padding: 20px;
       text-align: center;
     }
-    /* Estilo para el cuadro de texto */
+
+       /* Estilos para el cuadro de texto */
     .carousel-caption {
+      position: absolute;
+      top: 50%; /* Cambiar la posición vertical del cuadro de texto */
+      right: 20px; /* Cambiar la posición horizontal del cuadro de texto */
+      transform: translate(0, -50%); /* Ajustar la posición vertical del cuadro de texto */
       width: 80%; /* Ajusta el ancho del cuadro de texto */
       max-width: 600px; /* Establece un ancho máximo del cuadro de texto */
       background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del cuadro de texto */
@@ -93,21 +98,23 @@
       border-radius: 10px; /* Bordes redondeados del cuadro de texto */
     }
     
-    /* Estilo para el título dentro del cuadro de texto */
+    /* Estilos para el título dentro del cuadro de texto */
     .carousel-caption h3 {
       color: white; /* Color del texto del título */
       font-size: 30px; /* Tamaño del texto del título */
       margin-bottom: 10px; /* Espaciado inferior del título */
+      text-align: center; /* Centrar el texto del título */
     }
     
-    /* Estilo para la descripción dentro del cuadro de texto */
+    /* Estilos para la descripción dentro del cuadro de texto */
     .carousel-caption p {
       color: white; /* Color del texto de la descripción */
       font-size: 15px; /* Tamaño del texto de la descripción */
       margin-bottom: 10px; /* Espaciado inferior de la descripción */
+      text-align: center; /* Centrar el texto de la descripción */
     }
     
-    /* Estilo para el botón dentro del cuadro de texto */
+    /* Estilos para el botón dentro del cuadro de texto */
     .carousel-caption button {
       background-color: black; /* Color de fondo del botón */
       color: white; /* Color del texto del botón */
@@ -117,7 +124,7 @@
       cursor: pointer;
     }
     
-    /* Estilo para el botón cuando se coloca el cursor encima */
+    /* Estilos para el botón cuando se coloca el cursor encima */
     .carousel-caption button:hover {
       background-color: #777777; /* Color de fondo del botón al pasar el cursor */
     }
