@@ -84,48 +84,6 @@
       padding: 20px;
       text-align: center;
     }
-    
-    .carousel-caption {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .carousel-caption h3 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-    
-    .carousel-caption p {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    
-    .carousel-caption .button {
-      background-color: #000000;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border-radius: 50px;
-    }
-    
-    .carousel-caption .button:hover {
-      background-color: #777777;
-    }
   </style>
 </head>
 <body>
@@ -149,22 +107,77 @@
 
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="1.jpg" alt="Image 1" class="carousel-image">
+        <img src="1.jpg" alt="Image 1" class="carousel-image" data-title="Título 1" data-description="Descripción 1" data-audio="audio1.mp3">
         <div class="carousel-caption">
           <h3>Título 1</h3>
           <p>Descripción 1</p>
-          <button class="button">Reproducir audio</button>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
         </div>
       </div>
       <div class="item">
-        <img src="2.jpg" alt="Image 2" class="carousel-image">
+        <img src="2.jpg" alt="Image 2" class="carousel-image" data-title="Título 2" data-description="Descripción 2" data-audio="audio2.mp3">
         <div class="carousel-caption">
           <h3>Título 2</h3>
           <p>Descripción 2</p>
-          <button class="button">Reproducir audio</button>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
         </div>
       </div>
-      <!-- Agrega las demás imágenes con sus títulos, descripciones y audios -->
+      <div class="item">
+        <img src="3.jpg" alt="Image 3" class="carousel-image" data-title="Título 3" data-description="Descripción 3" data-audio="audio3.mp3">
+        <div class="carousel-caption">
+          <h3>Título 3</h3>
+          <p>Descripción 3</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="4.jpg" alt="Image 4" class="carousel-image" data-title="Título 4" data-description="Descripción 4" data-audio="audio4.mp3">
+        <div class="carousel-caption">
+          <h3>Título 4</h3>
+          <p>Descripción 4</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="5.jpg" alt="Image 5" class="carousel-image" data-title="Título 5" data-description="Descripción 5" data-audio="audio5.mp3">
+        <div class="carousel-caption">
+          <h3>Título 5</h3>
+          <p>Descripción 5</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="6.jpg" alt="Image 6" class="carousel-image" data-title="Título 6" data-description="Descripción 6" data-audio="audio6.mp3">
+        <div class="carousel-caption">
+          <h3>Título 6</h3>
+          <p>Descripción 6</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="7.jpg" alt="Image 7" class="carousel-image" data-title="Título 7" data-description="Descripción 7" data-audio="audio7.mp3">
+        <div class="carousel-caption">
+          <h3>Título 7</h3>
+          <p>Descripción 7</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="8.jpg" alt="Image 8" class="carousel-image" data-title="Título 8" data-description="Descripción 8" data-audio="audio8.mp3">
+        <div class="carousel-caption">
+          <h3>Título 8</h3>
+          <p>Descripción 8</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="9.jpg" alt="Image 9" class="carousel-image" data-title="Título 9" data-description="Descripción 9" data-audio="audio9.mp3">
+        <div class="carousel-caption">
+          <h3>Título 9</h3>
+          <p>Descripción 9</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
+      </div>
     </div>
 
     <!-- Controls -->
@@ -183,8 +196,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-    function toggleAudio() {
-      var audioElement = event.target.parentNode.querySelector("audio");
+    function toggleAudio(event) {
+      var audioElement = event.target.parentNode.parentNode.querySelector("audio");
       if (audioElement.paused) {
         audioElement.play();
       } else {
@@ -194,6 +207,7 @@
   </script>
 </body>
 </html>
+
 
 
 
