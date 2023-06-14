@@ -84,61 +84,6 @@
       padding: 20px;
       text-align: center;
     }
-
-    /* Estilos para el cuadro de texto */
-    .carousel-caption {
-      position: absolute;
-      top: 34%; /* Cambiar la posición vertical del cuadro de texto */
-      left: 76%; /* Cambiar la posición horizontal del cuadro de texto */
-      transform: translate(-50%, -50%); /* Centrar el cuadro de texto */
-      width: 80%; /* Ajustar el ancho del cuadro de texto */
-      max-width: 600px; /* Establecer un ancho máximo del cuadro de texto */
-      background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del cuadro de texto */
-      padding: 10px; /* Espaciado interno del cuadro de texto */
-      border-radius: 10px; /* Bordes redondeados del cuadro de texto */
-    }
-    
-    /* Estilos para el título dentro del cuadro de texto */
-    .carousel-caption h3 {
-      color: white; /* Color del texto del título */
-      font-size: 30px; /* Tamaño del texto del título */
-      margin-bottom: 10px; /* Espaciado inferior del título */
-      text-align: center; /* Centrar el texto del título */
-    }
-    
-    /* Estilos para la descripción dentro del cuadro de texto */
-    .carousel-caption p {
-      color: white; /* Color del texto de la descripción */
-      font-size: 15px; /* Tamaño del texto de la descripción */
-      margin-bottom: 10px; /* Espaciado inferior de la descripción */
-      text-align: center; /* Centrar el texto de la descripción */
-    }
-    
-    /* Estilos para el botón dentro del cuadro de texto */
-    .carousel-caption button {
-      background-color: black; /* Color de fondo del botón */
-      color: white; /* Color del texto del botón */
-      border: none; /* Sin borde */
-      padding: 10px 20px; /* Espaciado interno del botón */
-      border-radius: 20px; /* Bordes redondeados del botón */
-      cursor: pointer;
-    }
-    
-    /* Estilos para el botón cuando se coloca el cursor encima */
-    .carousel-caption button:hover {
-      background-color: #777777; /* Color de fondo del botón al pasar el cursor */
-    }
-    
-    /* Indicadores de tamaño del cuadro de texto */
-    .size-indicator {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      font-size: 12px;
-    }
  
   </style>
 </head>
@@ -147,7 +92,8 @@
     <h1>SALA 1 - ANTROPOLOGÍA</h1>
     <a class="button" href="https://museosantaana.netlify.app">Home</a>
   </header>
-  <div id="myCarousel" class="carousel slide section" data-ride="carousel">
+  
+<div id="myCarousel" class="carousel slide section" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -156,87 +102,29 @@
       <li data-target="#myCarousel" data-slide-to="3"></li>
       <li data-target="#myCarousel" data-slide-to="4"></li>
       <li data-target="#myCarousel" data-slide-to="5"></li>
-      <li data-target="#myCarousel" data-slide-to="6"></li>
-      <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
     </ol>
 
-     <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="1.jpg" alt="Image 1" class="carousel-image" data-title="Título 1" data-description="Descripción 1" data-audio="Foto1-Sala1-SAV.mp3">
-        <div class="carousel-caption">
-          <h3>VASIJA EFIGIE DE SANTA ANA DEL VALLE</h3>
-          <p>Esta vasija efigie o urna funeraria es una representación del dios zapoteco de la lluvia, conocido como Cocijo o el Señor del Rayo. Urnas similares se encuentran en las tumbas o entierros familiares instalados debajo de la casa. Las urnas en si hasta ahora nunca han contenido restos de difuntos y por eso es preferible el término vasija efigie.</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+        <img src="11.jpg" alt="Image 1" class="carousel-image">
       </div>
       <div class="item">
-        <img src="2.jpg" alt="Image 2" class="carousel-image" data-title="Título 2" data-description="Descripción 2" data-audio="Foto2-Sala1-SAV.mp3">
-        <div class="carousel-caption">
-          <h3>PIEDRA CON REPRESENTACIÓN DE LA MUERTE</h3>
-          <p>La muerte está presente en cualquier cultura, se puede representar de diversas formas. Durante la época prehispánica se pensaba que la muerte era enviada por una deidad maligna. En esta piedra labrada encontrada en Santa Ana se puede observar la forma de un cráneo que representa a la muerte.</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+        <img src="13.jpg" alt="Image 2" class="carousel-image">
       </div>
       <div class="item">
-        <img src="3.jpg" alt="Image 3" class="carousel-image" data-title="Título 3" data-description="Descripción 3" data-audio="audio3.mp3">
-        <div class="carousel-caption">
-          <h3>Título 3</h3>
-          <p>Descripción 3</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+        <img src="21.jpg" alt="Image 3" class="carousel-image">
       </div>
       <div class="item">
-        <img src="4.jpg" alt="Image 4" class="carousel-image" data-title="Título 4" data-description="Descripción 4" data-audio="audio4.mp3">
-        <div class="carousel-caption">
-          <h3>Título 4</h3>
-          <p>Descripción 4</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+        <img src="25.jpg" alt="Image 4" class="carousel-image">
       </div>
       <div class="item">
-        <img src="5.jpg" alt="Image 5" class="carousel-image" data-title="Título 5" data-description="Descripción 5" data-audio="audio5.mp3">
-        <div class="carousel-caption">
-          <h3>LA RELIGION EN LA ÉPOCA PREHISPÁNICA</h3>
-          <p>La religión en la época prehispánica se relacionaba principalmente con las labores de subsistencia, incluida la agricultura. Se utilizaban figurillas femeninas como ofrendas, simbolizando el culto a la fertilidad. Estas figurillas, encontradas en Santa Ana, corresponden a la época previa a Monte Albán II (1250-1100 a.C.) y Monte Albán I (600-100 a.C.).</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+        <img src="IMG_4491.jpg" alt="Image 5" class="carousel-image">
       </div>
-      <div class="item">
-        <img src="6.jpg" alt="Image 6" class="carousel-image" data-title="Título 6" data-description="Descripción 6" data-audio="audio6.mp3">
-        <div class="carousel-caption">
-          <h3>Título 6</h3>
-          <p>Descripción 6</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
-      </div>
-      <div class="item">
-        <img src="7.jpg" alt="Image 7" class="carousel-image" data-title="Título 7" data-description="Descripción 7" data-audio="audio7.mp3">
-        <div class="carousel-caption">
-          <h3>PIEZAS DE DONACIÓN.</h3>
-          <p>CORRESPONDIENTES A LAS ÉPOCAS CLÁSICA Y POSTCLÁSICA (260.900 d.c.) 
-            1.- URNAS 
-            2.- HACHAS DE PIEDRA</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
-      </div>
-      <div class="item">
-        <img src="8.jpg" alt="Image 8" class="carousel-image" data-title="Título 8" data-description="Descripción 8" data-audio="audio8.mp3">
-        <div class="carousel-caption">
-          <h3>Título 8</h3>
-          <p>Descripción 8</p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
-      </div>
-      <div class="item">
-        <img src="9.jpg" alt="Image 9" class="carousel-image" data-title="Título 9" data-description="Descripción 9" data-audio="Foto3-Sala1-SAV.mp3">
-        <div class="carousel-caption">
-          <h3>COCIJO</h3>
-          <p>LA REPRESENTACION DE "COCIJO", DEIDAD ZAPOTECA DEL RAYO Y QUE REPRESENTA UNO DE LOS NOMBRES PARA LOS AÑOS, ES LA QUE DEBIÓ OCUPAR LA PARTE CENTRAL DE LA PIEDRA DENTRO DE UN CARTUCHO ABAJO DE ESTE APARECEN DOS BARRAS CADA UNO DE ESTAS EXPRESABA UN NÚMERO CON UN VALOR DE 5 UNIDADES, CON BANDAS DIAGONALES. </p>
-          <button onclick="toggleAudio(event)">Reproducir audio</button>
-        </div>
+            <div class="item">
+        <img src="40.jpg" alt="Image 6" class="carousel-image">
       </div>
     </div>
+
     <!-- Controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -247,21 +135,12 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+  
   <footer>
     <p>&copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados</p>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    function toggleAudio(event) {
-      var audioElement = event.target.parentNode.parentNode.querySelector("audio");
-      if (audioElement.paused) {
-        audioElement.play();
-      } else {
-        audioElement.pause();
-      }
-    }
-  </script>
 </body>
 </html>
 
