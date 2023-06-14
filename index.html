@@ -163,9 +163,12 @@
 
      <div class="carousel-inner" role="listbox">
       <div class="item active">
-      <img src="1.jpg" alt="Imagen 1">
-      <button class="info-button">Más información</button>
-      </div>
+        <img src="1.jpg" alt="Image 1" class="carousel-image" data-title="Título 1" data-description="Descripción 1" data-audio="Foto1-Sala1-SAV.mp3">
+        <div class="carousel-caption">
+          <h3>VASIJA EFIGIE DE SANTA ANA DEL VALLE</h3>
+          <p>Esta vasija efigie o urna funeraria es una representación del dios zapoteco de la lluvia, conocido como Cocijo o el Señor del Rayo. Urnas similares se encuentran en las tumbas o entierros familiares instalados debajo de la casa. Las urnas en si hasta ahora nunca han contenido restos de difuntos y por eso es preferible el término vasija efigie.</p>
+          <button onclick="toggleAudio(event)">Reproducir audio</button>
+        </div>
       </div>
       <div class="item">
         <img src="2.jpg" alt="Image 2" class="carousel-image" data-title="Título 2" data-description="Descripción 2" data-audio="Foto2-Sala1-SAV.mp3">
@@ -247,40 +250,20 @@
   <footer>
     <p>&copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados</p>
   </footer>
-  <div id="modal">
-    <div class="modal-content">
-      <h2>Título de la imagen</h2>
-      <p>Descripción de la imagen.</p>
-      <button class="play-button">Reproducir</button>
-    </div>
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-    var infoButtons = document.getElementsByClassName("info-button");
-    var modal = document.getElementById("modal");
-
-    for (var i = 0; i < infoButtons.length; i++) {
-      infoButtons[i].addEventListener("click", function() {
-        modal.style.display = "block";
-      });
-    }
-
-    window.addEventListener("click", function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    function toggleAudio(event) {
+      var audioElement = event.target.parentNode.parentNode.querySelector("audio");
+      if (audioElement.paused) {
+        audioElement.play();
+      } else {
+        audioElement.pause();
       }
-    });
-
-    var playButton = document.getElementsByClassName("play-button")[0];
-
-    playButton.addEventListener("click", function() {
-      // Lógica para reproducir audio o utilizar lector de texto en voz sintetizada
-    });
+    }
   </script>
 </body>
 </html>
-
 
 
 
