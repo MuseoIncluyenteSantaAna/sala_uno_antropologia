@@ -60,6 +60,29 @@
       margin-right: 10px;
       border-radius: 10px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    
+    .info-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 20px;
+      display: none;
+    }
+    
+    .gallery img:hover + .info-button {
+      display: block;
     }
     
     .image-bullets {
@@ -236,30 +259,31 @@
   <script>
     // Open modal on button click
     var modal = document.getElementById("modal");
-    var infoButtons = document.getElementsByClassName("info-button");
+    var carouselItems = document.getElementsByClassName("item");
     var modalClose = document.getElementsByClassName("modal-close")[0];
     
-    for (var i = 0; i < infoButtons.length; i++) {
-      infoButtons[i].onclick = function() {
-        modal.style.display = "block";
-        var imageTitle = this.getAttribute("data-title");
-        var imageDescription = this.getAttribute("data-description");
+    for (var i = 0; i < carouselItems.length; i++) {
+      var carouselItem = carouselItems[i];
+      var infoButton = document.createElement("button");
+      infoButton.className = "info-button";
+      infoButton.textContent = "Más información";
+      var image = carouselItem.getElementsByClassName("carousel-image")[0];
+      carouselItem.appendChild(infoButton);
+      
+      infoButton.addEventListener("click", function() {
+        var title = this.getAttribute("data-title");
+        var description = this.getAttribute("data-description");
+        var modalTitle = modal.getElementsByClassName("modal-title")[0];
+        var modalDescription = modal.getElementsByClassName("modal-description")[0];
         
-        document.querySelector(".modal-title").textContent = imageTitle;
-        document.querySelector(".modal-description").textContent = imageDescription;
-      }
-    }
-    
-    // Close modal on close button click
-    modalClose.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // Close modal when clicking outside the modal content
-    window.onclick = function(event) {
-      if (event.target == modal) {
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = "block";
+      });
+      
+      modalClose.addEventListener("click", function() {
         modal.style.display = "none";
-      }
+      });
     }
   </script>
 </body>
