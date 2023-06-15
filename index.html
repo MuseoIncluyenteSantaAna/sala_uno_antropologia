@@ -95,7 +95,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     }
     
     .modal-content {
@@ -107,6 +107,7 @@
       padding: 20px;
       text-align: center;
       border-radius: 10px;
+      color: white;
     }
     
     .modal-close {
@@ -114,7 +115,7 @@
       top: 10px;
       right: 10px;
       font-size: 20px;
-      color: #333333;
+      color: #ffffff;
       cursor: pointer;
     }
     
@@ -170,39 +171,39 @@
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src="1.jpg" alt="Image 1" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 1" data-description="Descripción de la imagen 1">Más información</button>
       </div>
       <div class="item">
         <img src="2.jpg" alt="Image 2" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 2" data-description="Descripción de la imagen 2">Más información</button>
       </div>
       <div class="item">
         <img src="3.jpg" alt="Image 3" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 3" data-description="Descripción de la imagen 3">Más información</button>
       </div>
       <div class="item">
         <img src="4.jpg" alt="Image 4" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 4" data-description="Descripción de la imagen 4">Más información</button>
       </div>
       <div class="item">
         <img src="5.jpg" alt="Image 5" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 5" data-description="Descripción de la imagen 5">Más información</button>
       </div>
       <div class="item">
         <img src="6.jpg" alt="Image 6" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 6" data-description="Descripción de la imagen 6">Más información</button>
       </div>
       <div class="item">
         <img src="7.jpg" alt="Image 7" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 7" data-description="Descripción de la imagen 7">Más información</button>
       </div>
       <div class="item">
         <img src="8.jpg" alt="Image 8" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 8" data-description="Descripción de la imagen 8">Más información</button>
       </div>
       <div class="item">
         <img src="9.jpg" alt="Image 9" class="carousel-image">
-        <button class="info-button">Más información</button>
+        <button class="info-button" data-title="Título de la imagen 9" data-description="Descripción de la imagen 9">Más información</button>
       </div>
     </div>
 
@@ -241,9 +242,8 @@
     for (var i = 0; i < infoButtons.length; i++) {
       infoButtons[i].onclick = function() {
         modal.style.display = "block";
-        var imageAlt = this.previousElementSibling.alt;
-        var imageTitle = "Título de la imagen " + imageAlt;
-        var imageDescription = "Descripción de la imagen " + imageAlt;
+        var imageTitle = this.getAttribute("data-title");
+        var imageDescription = this.getAttribute("data-description");
         
         document.querySelector(".modal-title").textContent = imageTitle;
         document.querySelector(".modal-description").textContent = imageDescription;
