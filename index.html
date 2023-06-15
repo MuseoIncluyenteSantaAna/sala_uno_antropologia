@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sala 1 -- Antropología</title>
+  <title>Museo Comunitario Shan-Dany Santa Ana Del Valle</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
     body {
@@ -20,7 +20,7 @@
       align-items: center;
       justify-content: space-between;
     }
-   
+    
     .button {
       background-color: #555555;
       color: white;
@@ -48,17 +48,36 @@
       background-color: #2a2a2a;
     }
     
+    .section h2 {
+      margin-top: 0;
+      font-size: 80px;
+      font-family: 'Didot', sans-serif;
+    }
+    
+    .section p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-family: 'Didot', sans-serif;
+    }
+    
+    .section .button {
+      background-color: #555555;
+      color: white;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+    
     .gallery {
       display: flex;
       overflow-x: auto;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
     
     .gallery img {
-      width: 300px;
+      width: 800px;
       height: auto;
-      margin-right: 30px;
-      border-radius: 20px;
+      margin-right: 10px;
+      border-radius: 10px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
     
@@ -86,58 +105,14 @@
       padding: 20px;
       text-align: center;
     }
-    
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    }
-    
-    .modal-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #333333;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      color: white;
-    }
-    
-    .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
-      color: #ffffff;
-      cursor: pointer;
-    }
-    
-    .modal-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    
-    .modal-description {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>SALA 1 - ANTROPOLOGÍA</h1>
-    <a class="button" href="https://museosantaana.netlify.app">Home</a>
+    <a class="button" href="https://museosantaana.netlify.app/">Home</a>
   </header>
-  
-  <div id="myCarousel" class="carousel slide section" data-ride="carousel">
+<div id="myCarousel" class="carousel slide section" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -148,81 +123,36 @@
       <li data-target="#myCarousel" data-slide-to="5"></li>
       <li data-target="#myCarousel" data-slide-to="6"></li>
       <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>  
     </ol>
 
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <div class="carousel-image-container">
-          <img src="1.jpg" alt="Image 1" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 1" data-description="Descripción de la imagen 1">Más información</button>
-          </div>
-        </div>
+        <img src="1.jpg" alt="Image 1" class="carousel-image">
       </div>
       <div class="item">
-        <div class="carousel-image-container">
-          <img src="2.jpg" alt="Image 2" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 2" data-description="Descripción de la imagen 2">Más información</button>
-          </div>
-        </div>
+        <img src="2.jpg" alt="Image 2" class="carousel-image">
       </div>
       <div class="item">
-        <div class="carousel-image-container">
-          <img src="3.jpg" alt="Image 3" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 3" data-description="Descripción de la imagen 3">Más información</button>
-          </div>
-        </div>
+        <img src="3.jpg" alt="Image 3" class="carousel-image">
       </div>
       <div class="item">
-        <div class="carousel-image-container">
-          <img src="4.jpg" alt="Image 4" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 4" data-description="Descripción de la imagen 4">Más información</button>
-          </div>
-        </div>
+        <img src="4.jpg" alt="Image 4" class="carousel-image">
       </div>
       <div class="item">
-        <div class="carousel-image-container">
-          <img src="5.jpg" alt="Image 5" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 5" data-description="Descripción de la imagen 5">Más información</button>
-          </div>
-        </div>
+        <img src="5.jpg" alt="Image 5" class="carousel-image">
       </div>
       <div class="item">
-        <div class="carousel-image-container">
-          <img src="6.jpg" alt="Image 6" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 6" data-description="Descripción de la imagen 6">Más información</button>
-          </div>
-        </div>
+        <img src="6.jpg" alt="Image 6" class="carousel-image">
       </div>
-      <div class="item">
-        <div class="carousel-image-container">
-          <img src="7.jpg" alt="Image 7" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 7" data-description="Descripción de la imagen 7">Más información</button>
-          </div>
-        </div>
+            <div class="item">
+        <img src="7.jpg" alt="Image 6" class="carousel-image">
       </div>
-      <div class="item">
-        <div class="carousel-image-container">
-          <img src="8.jpg" alt="Image 8" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 8" data-description="Descripción de la imagen 8">Más información</button>
-          </div>
-        </div>
+            <div class="item">
+        <img src="8.jpg" alt="Image 6" class="carousel-image">
       </div>
-      <div class="item">
-        <div class="carousel-image-container">
-          <img src="9.jpg" alt="Image 9" class="carousel-image">
-          <div class="carousel-overlay">
-            <button class="info-button" data-title="Título de la imagen 9" data-description="Descripción de la imagen 9">Más información</button>
-          </div>
-        </div>
+            <div class="item">
+        <img src="9.jpg" alt="Image 6" class="carousel-image">
       </div>
     </div>
 
@@ -236,65 +166,12 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h2 class="modal-title"></h2>
-      <p class="modal-description"></p>
-      <button class="modal-play-button">Reproducir audio</button>
-    </div>
-  </div>
   
-  <footer>
+    <footer>
     <p>&copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados</p>
   </footer>
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-    // Open modal on button click
-    var modal = document.getElementById("modal");
-    var infoButtons = document.getElementsByClassName("info-button");
-    var modalClose = document.getElementsByClassName("modal-close")[0];
-    
-    for (var i = 0; i < infoButtons.length; i++) {
-      infoButtons[i].addEventListener("click", function() {
-        var title = this.getAttribute("data-title");
-        var description = this.getAttribute("data-description");
-        
-        document.getElementsByClassName("modal-title")[0].innerHTML = title;
-        document.getElementsByClassName("modal-description")[0].innerHTML = description;
-        modal.style.display = "block";
-      });
-    }
-    
-    // Close modal on close button click
-    modalClose.addEventListener("click", function() {
-      modal.style.display = "none";
-    });
-    
-    // Close modal on outside click
-    window.addEventListener("click", function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-    
-    // Play audio on button click
-    var playButton = document.getElementsByClassName("modal-play-button")[0];
-    
-    playButton.addEventListener("click", function() {
-      // Add your code to play the audio here
-      // For example, you can use the HTML5 audio element
-      var audio = new Audio("Foto1-Sala1-SAV.mp3");
-      audio.play();
-    });
-  </script>
 </body>
 </html>
-
-
-
-
 
