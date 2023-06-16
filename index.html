@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museo Comunitario</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Museo Comunitario Shan-Dany Santa Ana Del Valle</title>
   <style>
-    /* Estilos personalizados */
-    .button {
+    /* Estilos */
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
       background-color: #333;
       color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .button {
+      background-color: #333;
       border: none;
+      color: #fff;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
@@ -26,73 +41,12 @@
       color: #fff;
     }
 
-    .button.dark:hover {
-      background-color: #555;
-    }
-
-    /* Estilos del carrusel */
-    .carousel {
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .carousel-inner {
-      width: 100%;
-      height: auto;
+    .section {
+      padding: 20px;
     }
 
     .carousel-image {
       width: 100%;
-      height: auto;
-    }
-
-    .carousel-caption {
-      position: absolute;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      width: 100%;
-      padding: 10px;
-      text-align: center;
-    }
-
-    /* Estilos de la ventana emergente */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
     }
 
     footer {
@@ -105,9 +59,13 @@
 </head>
 
 <body>
-  <div class="carousel-container">
+  <header>
+    <h1>Museo Comunitario Shan-Dany Santa Ana Del Valle</h1>
+  </header>
+
+  <div class="section">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicadores del carrusel -->
+      <!-- Indicadores -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -119,131 +77,151 @@
         <li data-target="#myCarousel" data-slide-to="7"></li>
       </ol>
 
-      <!-- Slides del carrusel -->
+      <!-- Contenido del carrusel -->
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="1.jpg" alt="Imagen 1" class="carousel-image" onclick="openPopup(1)">
+        <div class="item active">
+          <img src="1.jpg" alt="Image 1" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 1</h3>
-            <p>Descripción de la imagen 1.</p>
+            <button class="button dark" onclick="openPopup(1)">Más información</button>
             <button class="button dark" onclick="playAudio(1)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="2.jpg" alt="Imagen 2" class="carousel-image" onclick="openPopup(2)">
+        <div class="item">
+          <img src="2.jpg" alt="Image 2" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 2</h3>
-            <p>Descripción de la imagen 2.</p>
+            <button class="button dark" onclick="openPopup(2)">Más información</button>
             <button class="button dark" onclick="playAudio(2)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="3.jpg" alt="Imagen 3" class="carousel-image" onclick="openPopup(3)">
+        <div class="item">
+          <img src="3.jpg" alt="Image 3" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 3</h3>
-            <p>Descripción de la imagen 3.</p>
+            <button class="button dark" onclick="openPopup(3)">Más información</button>
             <button class="button dark" onclick="playAudio(3)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="4.jpg" alt="Imagen 4" class="carousel-image" onclick="openPopup(4)">
+        <div class="item">
+          <img src="4.jpg" alt="Image 4" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 4</h3>
-            <p>Descripción de la imagen 4.</p>
+            <button class="button dark" onclick="openPopup(4)">Más información</button>
             <button class="button dark" onclick="playAudio(4)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="5.jpg" alt="Imagen 5" class="carousel-image" onclick="openPopup(5)">
+        <div class="item">
+          <img src="5.jpg" alt="Image 5" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 5</h3>
-            <p>Descripción de la imagen 5.</p>
+            <button class="button dark" onclick="openPopup(5)">Más información</button>
             <button class="button dark" onclick="playAudio(5)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="6.jpg" alt="Imagen 6" class="carousel-image" onclick="openPopup(6)">
+        <div class="item">
+          <img src="6.jpg" alt="Image 6" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 6</h3>
-            <p>Descripción de la imagen 6.</p>
+            <button class="button dark" onclick="openPopup(6)">Más información</button>
             <button class="button dark" onclick="playAudio(6)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="7.jpg" alt="Imagen 7" class="carousel-image" onclick="openPopup(7)">
+        <div class="item">
+          <img src="7.jpg" alt="Image 7" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 7</h3>
-            <p>Descripción de la imagen 7.</p>
+            <button class="button dark" onclick="openPopup(7)">Más información</button>
             <button class="button dark" onclick="playAudio(7)">Reproducir audio</button>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="8.jpg" alt="Imagen 8" class="carousel-image" onclick="openPopup(8)">
+        <div class="item">
+          <img src="8.jpg" alt="Image 8" class="carousel-image">
           <div class="carousel-caption">
-            <h3>Imagen 8</h3>
-            <p>Descripción de la imagen 8.</p>
+            <button class="button dark" onclick="openPopup(8)">Más información</button>
             <button class="button dark" onclick="playAudio(8)">Reproducir audio</button>
           </div>
         </div>
       </div>
 
       <!-- Controles del carrusel -->
-      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Anterior</span>
       </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Siguiente</span>
       </a>
-    </div>
-
-    <!-- Ventana emergente -->
-    <div id="popupModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Imagen en pantalla completa</h2>
-        <img id="popupImage" src="" alt="Imagen en pantalla completa">
-      </div>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Ventana emergente -->
+  <div id="popup" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+    </div>
+  </div>
+
   <footer>
-    <p>&copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados</p>
+    &copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados
   </footer>
 
-  <!-- Scripts -->
   <script>
-    var audioSources = [
-      "",  // El índice 0 no se utiliza, comenzamos desde el índice 1
-      "audio1.mp3",
-      "audio2.mp3",
-      "audio3.mp3",
-      "audio4.mp3",
-      "audio5.mp3",
-      "audio6.mp3",
-      "audio7.mp3",
-      "audio8.mp3"
-    ];
+    // Función para abrir la ventana emergente con información adicional
+    function openPopup(imageId) {
+      let title, description;
 
-    function openPopup(index) {
-      var modal = document.getElementById("popupModal");
-      var image = document.getElementById("popupImage");
-      image.src = index + ".jpg";
-      modal.style.display = "block";
+      switch (imageId) {
+        case 1:
+          title = "Imagen 1";
+          description = "Descripción de la imagen 1.";
+          break;
+        case 2:
+          title = "Imagen 2";
+          description = "Descripción de la imagen 2.";
+          break;
+        case 3:
+          title = "Imagen 3";
+          description = "Descripción de la imagen 3.";
+          break;
+        case 4:
+          title = "Imagen 4";
+          description = "Descripción de la imagen 4.";
+          break;
+        case 5:
+          title = "Imagen 5";
+          description = "Descripción de la imagen 5.";
+          break;
+        case 6:
+          title = "Imagen 6";
+          description = "Descripción de la imagen 6.";
+          break;
+        case 7:
+          title = "Imagen 7";
+          description = "Descripción de la imagen 7.";
+          break;
+        case 8:
+          title = "Imagen 8";
+          description = "Descripción de la imagen 8.";
+          break;
+      }
+
+      document.getElementById("popup-title").innerHTML = title;
+      document.getElementById("popup-description").innerHTML = description;
+
+      document.getElementById("popup").style.display = "block";
     }
 
+    // Función para cerrar la ventana emergente
     function closePopup() {
-      var modal = document.getElementById("popupModal");
-      modal.style.display = "none";
+      document.getElementById("popup").style.display = "none";
     }
 
-    function playAudio(index) {
-      var audio = new Audio(audioSources[index]);
-      audio.play();
+    // Función para reproducir audio
+    function playAudio(imageId) {
+      // Implementa aquí la lógica para reproducir el audio asociado a cada imagen
+      console.log("Reproducir audio de la imagen " + imageId);
     }
   </script>
 </body>
 
 </html>
+
 
 
