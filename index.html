@@ -154,10 +154,13 @@
   </div>
 
   <!-- Ventana emergente -->
-  <div id="popup" class="section" style="display: none;">
-    <h2 id="popup-title"></h2>
-    <p id="popup-description"></p>
-    <button class="button" onclick="closePopup()">Cerrar</button>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="popup-title">Información de la imagen</h2>
+      <p id="popup-description">Aquí puedes agregar la información que deseas mostrar sobre la imagen seleccionada.</p>
+      <button class="button" onclick="toggleAudio()">Reproducir audio</button>
+    </div>
   </div>
   
   <footer>
@@ -174,38 +177,47 @@
         case 1:
           title = "Imagen 1";
           description = "Descripción de la imagen 1.";
+          popup.dataset.audio = "Foto1-Sala1-SAV.mp3";
           break;
         case 2:
           title = "Imagen 2";
           description = "Descripción de la imagen 2.";
+          popup.dataset.audio = "Foto2-Sala1-SAV.mp3";
           break;
         case 3:
           title = "Imagen 3";
           description = "Descripción de la imagen 3.";
+          popup.dataset.audio = "Foto3-Sala1-SAV.mp3";
           break;
         case 4:
           title = "Imagen 4";
           description = "Descripción de la imagen 4.";
+          popup.dataset.audio = "audio4.mp3";
           break;
         case 5:
           title = "Imagen 5";
           description = "Descripción de la imagen 5.";
+          popup.dataset.audio = "audio5.mp3";
           break;
         case 6:
           title = "Imagen 6";
           description = "Descripción de la imagen 6.";
+          popup.dataset.audio = "audio6.mp3";
           break;
         case 7:
           title = "Imagen 7";
           description = "Descripción de la imagen 7.";
+          popup.dataset.audio = "audio7.mp3";
           break;
         case 8:
           title = "Imagen 8";
           description = "Descripción de la imagen 8.";
+          popup.dataset.audio = "audio8.mp3";
           break;
         case 9:
           title = "Imagen 9";
           description = "Descripción de la imagen 9.";
+          popup.dataset.audio = "audio9.mp3";
           break;
       }
       $("#popup-title").text(title);
@@ -216,6 +228,20 @@
     // Función para cerrar la ventana emergente
     function closePopup() {
       $("#popup").hide();
+    }
+    
+    function toggleAudio() {
+      var popup = document.getElementById("popup");
+      var audioFile = popup.dataset.audio;
+      
+      if (audioFile) {
+        if (audioElement && !audioElement.paused) {
+          audioElement.pause();
+        } else {
+          audioElement = new Audio(audioFile);
+          audioElement.play();
+        }
+      }
     }
   </script>
 </body>
