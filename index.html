@@ -167,81 +167,104 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
+
+    <script>
+    // Variables globales
+    var audioElement;
+
     // Función para abrir la ventana emergente con la información correspondiente
     function openPopup(id) {
-      var title, description;
+      var title, description, audioFile;
       switch (id) {
         case 1:
           title = "Imagen 1";
           description = "Descripción de la imagen 1.";
-          popup.dataset.audio = "Foto1-Sala1-SAV.mp3";
+          audioFile = "Foto1-Sala1-SAV.mp3";
           break;
         case 2:
           title = "Imagen 2";
           description = "Descripción de la imagen 2.";
-          popup.dataset.audio = "Foto2-Sala1-SAV.mp3";
+          audioFile = "Foto2-Sala1-SAV.mp3";
           break;
         case 3:
           title = "Imagen 3";
           description = "Descripción de la imagen 3.";
-          popup.dataset.audio = "Foto3-Sala1-SAV.mp3";
+          audioFile = "Foto3-Sala1-SAV.mp3";
           break;
         case 4:
           title = "Imagen 4";
           description = "Descripción de la imagen 4.";
-          popup.dataset.audio = "audio4.mp3";
+          audioFile = "audio4.mp3";
           break;
         case 5:
           title = "Imagen 5";
           description = "Descripción de la imagen 5.";
-          popup.dataset.audio = "audio5.mp3";
+          audioFile = "audio5.mp3";
           break;
         case 6:
           title = "Imagen 6";
           description = "Descripción de la imagen 6.";
-          popup.dataset.audio = "audio6.mp3";
+          audioFile = "audio6.mp3";
           break;
         case 7:
           title = "Imagen 7";
           description = "Descripción de la imagen 7.";
-          popup.dataset.audio = "audio7.mp3";
+          audioFile = "audio7.mp3";
           break;
         case 8:
           title = "Imagen 8";
           description = "Descripción de la imagen 8.";
-          popup.dataset.audio = "audio8.mp3";
+          audioFile = "audio8.mp3";
           break;
         case 9:
           title = "Imagen 9";
           description = "Descripción de la imagen 9.";
-          popup.dataset.audio = "audio9.mp3";
+          audioFile = "audio9.mp3";
           break;
       }
       $("#popup-title").text(title);
       $("#popup-description").text(description);
       $("#popup").show();
+
+      // Actualizar el botón de reproducción de audio
+      var playAudioButton = document.getElementById("play-audio-button");
+      playAudioButton.onclick = function() {
+        toggleAudio(audioFile);
+      };
     }
 
     // Función para cerrar la ventana emergente
     function closePopup() {
       $("#popup").hide();
+      pauseAudio();
     }
-    
-    function toggleAudio() {
-      var popup = document.getElementById("popup");
-      var audioFile = popup.dataset.audio;
-      
-      if (audioFile) {
-        if (audioElement && !audioElement.paused) {
-          audioElement.pause();
-        } else {
-          audioElement = new Audio(audioFile);
-          audioElement.play();
-        }
+
+    // Función para reproducir/pausar el audio
+    function toggleAudio(audioFile) {
+      if (audioElement && !audioElement.paused) {
+        pauseAudio();
+      } else {
+        playAudio(audioFile);
+      }
+    }
+
+    // Función para reproducir el audio
+    function playAudio(audioFile) {
+      if (audioElement) {
+        pauseAudio();
+      }
+      audioElement = new Audio(audioFile);
+      audioElement.play();
+    }
+
+    // Función para pausar el audio
+    function pauseAudio() {
+      if (audioElement) {
+        audioElement.pause();
       }
     }
   </script>
+  
 </body>
 </html>
 
