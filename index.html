@@ -6,16 +6,16 @@
   <style>
     /* Estilos */
     body {
-      background-color: #333;
+      background-color: #f7f7f7;
       font-family: Arial, sans-serif;
-      color: #fff;
     }
 
     header {
-      background-color: #333;
+      background-color: #222;
       color: #fff;
       padding: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     h1 {
@@ -31,32 +31,43 @@
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin: 4px 2px;
+      margin: 4px;
       cursor: pointer;
       border-radius: 5px;
     }
 
     .section {
       padding: 20px;
+      margin-bottom: 20px;
+      background-color: #333;
+      color: #fff;
     }
 
     .carousel-image {
       width: 100%;
     }
 
+    #home-button {
+      float: right;
+      margin-right: 20px;
+    }
+
     footer {
-      background-color: #333;
+      background-color: #111;
       color: #fff;
       padding: 20px;
       text-align: center;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>
-    <span>Sala 1 - Antropología</span>
-    <a href="https://museosantaana.netlify.app/" id="home-button">Home</a>
-  </h1>
+  <header>
+    <h1>
+      <span>Sala 1 - Antropología</span>
+      <a href="https://museosantaana.netlify.app/" id="home-button">Home</a>
+    </h1>
+  </header>
   <div id="myCarousel" class="carousel slide section" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -185,7 +196,6 @@
           description = "Descripción de la imagen 8.";
           break;
       }
-
       $("#popup-title").text(title);
       $("#popup-description").text(description);
       $("#popup").show();
