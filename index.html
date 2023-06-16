@@ -154,13 +154,11 @@
   </div>
 
   <!-- Ventana emergente -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2 id="popup-title">Información de la imagen</h2>
-      <p id="popup-description">Aquí puedes agregar la información que deseas mostrar sobre la imagen seleccionada.</p>
-      <button class="button" onclick="toggleAudio()">Reproducir audio</button>
-    </div>
+    <div id="popup" class="section" style="display: none;">
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
+    <button class="button" onclick="toggleAudio()">Reproducir audio</button>
+    <button class="button" onclick="closePopup()">Cerrar</button>
   </div>
   
   <footer>
