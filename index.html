@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Museo Comunitario Shan-Dany Santa Ana Del Valle</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
     /* Estilos */
     body {
       background-color: #f7f7f7;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
     header {
@@ -24,9 +22,9 @@
     }
 
     .button {
-      background-color: #333;
+      background-color: #4CAF50;
       border: none;
-      color: #fff;
+      color: white;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
@@ -36,11 +34,6 @@
       cursor: pointer;
     }
 
-    .button.dark {
-      background-color: #333;
-      color: #fff;
-    }
-
     .section {
       padding: 20px;
     }
@@ -48,126 +41,104 @@
     .carousel-image {
       width: 100%;
     }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>Museo Comunitario Shan-Dany Santa Ana Del Valle</h1>
+    <h1>SALA 1 - ANTROPOLOGÍA</h1>
+    <a class="button" href="https://museosantaana.netlify.app/">Home</a>
   </header>
+  <div id="myCarousel" class="carousel slide section" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+    </ol>
 
-  <div class="section">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicadores -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-        <li data-target="#myCarousel" data-slide-to="7"></li>
-      </ol>
-
-      <!-- Contenido del carrusel -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="1.jpg" alt="Image 1" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(1)">Más información</button>
-            <button class="button dark" onclick="playAudio(1)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="2.jpg" alt="Image 2" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(2)">Más información</button>
-            <button class="button dark" onclick="playAudio(2)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="3.jpg" alt="Image 3" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(3)">Más información</button>
-            <button class="button dark" onclick="playAudio(3)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="4.jpg" alt="Image 4" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(4)">Más información</button>
-            <button class="button dark" onclick="playAudio(4)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="5.jpg" alt="Image 5" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(5)">Más información</button>
-            <button class="button dark" onclick="playAudio(5)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="6.jpg" alt="Image 6" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(6)">Más información</button>
-            <button class="button dark" onclick="playAudio(6)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="7.jpg" alt="Image 7" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(7)">Más información</button>
-            <button class="button dark" onclick="playAudio(7)">Reproducir audio</button>
-          </div>
-        </div>
-        <div class="item">
-          <img src="8.jpg" alt="Image 8" class="carousel-image">
-          <div class="carousel-caption">
-            <button class="button dark" onclick="openPopup(8)">Más información</button>
-            <button class="button dark" onclick="playAudio(8)">Reproducir audio</button>
-          </div>
+    <div class="carousel-inner" role="listbox">
+      <!-- Imágenes del carousel -->
+      <div class="item active">
+        <img src="1.jpg" alt="Image 1" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(1)">Más información</button>
         </div>
       </div>
-
-      <!-- Controles del carrusel -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
+      <div class="item">
+        <img src="2.jpg" alt="Image 2" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(2)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="3.jpg" alt="Image 3" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(3)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="4.jpg" alt="Image 4" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(4)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="5.jpg" alt="Image 5" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(5)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="6.jpg" alt="Image 6" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(6)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="7.jpg" alt="Image 7" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(7)">Más información</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="8.jpg" alt="Image 8" class="carousel-image">
+        <div class="carousel-caption">
+          <button class="button" onclick="openPopup(8)">Más información</button>
+        </div>
+      </div>
     </div>
+
+    <!-- Controles de navegación -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
   <!-- Ventana emergente -->
-  <div id="popup" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2 id="popup-title"></h2>
-      <p id="popup-description"></p>
-    </div>
+  <div id="popup" class="section" style="display: none;">
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
+    <button class="button" onclick="closePopup()">Cerrar</button>
   </div>
 
-  <footer>
-    &copy; 2023 Museo Comunitario Shan-Dany Santa Ana Del Valle | Todos los derechos reservados
-  </footer>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-    // Función para abrir la ventana emergente con información adicional
-    function openPopup(imageId) {
-      let title, description;
-
-      switch (imageId) {
+    // Función para abrir la ventana emergente con la información correspondiente
+    function openPopup(id) {
+      var title, description;
+      switch (id) {
         case 1:
           title = "Imagen 1";
           description = "Descripción de la imagen 1.";
@@ -202,26 +173,19 @@
           break;
       }
 
-      document.getElementById("popup-title").innerHTML = title;
-      document.getElementById("popup-description").innerHTML = description;
-
-      document.getElementById("popup").style.display = "block";
+      $("#popup-title").text(title);
+      $("#popup-description").text(description);
+      $("#popup").show();
     }
 
     // Función para cerrar la ventana emergente
     function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-
-    // Función para reproducir audio
-    function playAudio(imageId) {
-      // Implementa aquí la lógica para reproducir el audio asociado a cada imagen
-      console.log("Reproducir audio de la imagen " + imageId);
+      $("#popup").hide();
     }
   </script>
 </body>
-
 </html>
+
 
 
 
